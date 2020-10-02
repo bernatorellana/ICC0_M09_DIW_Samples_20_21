@@ -1,0 +1,226 @@
+@color_corporatiu: lime; // #rrggbbaa
+
+#org_iesmila_pag1 {
+
+    html {
+        height: 100%;
+
+        box-sizing: content-box;
+        background-color: @color_corporatiu;
+        padding: 10px;
+
+        font-size: 16px;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    main {
+        // height: 100%;
+    }
+
+    @padding_section: 20px;
+
+    #org_iesmila_pag1 section {
+        background-color: rgba(120, 120, 120, 1);
+        padding: @padding_section;
+        //width: calc(50% - @padding_section * 2);
+        box-sizing: border-box;
+        width: 50%;
+        height: 100%;
+        float: left;
+
+    }
+
+    h1 {
+        //font-size: 120%; // 120%* 16
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        width: 15em; // 20 * mida de la font
+        //width: 100vw;
+        //height: 100vh;
+        text-align: center;
+        //        T  R   B   L    --> TRIiBaL
+        //margin: 0px 0px 0px 1cm;
+        //margin-left: 1cm;
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 0px auto;
+    }
+
+    .centrat {
+        border: 1px solid black;
+        width: 20%;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    i,
+    b {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        border-radius: 50%;
+        background-image: url("https://picsum.photos/id/237/100/100");
+    }
+
+    b {
+        display: inline-block;
+        margin: -2px;
+        width: 100px;
+        height: 50px;
+        /*border-radius: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;*/
+        border-radius: 0px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        background-image: url("https://www.fillmurray.com/g/100/100");
+        background-position: center 30%;
+    }
+
+    li {
+        display: block;
+        border: 1px solid #333;
+        padding: 10px;
+        width: 50%;
+        box-sizing: border-box;
+        &:nth-child(2n) {
+            background-color: rgb(112, 163, 35);
+        }
+    
+        &:nth-child(2n+1) {
+            background-color: rgb(209, 245, 156);
+        }
+    
+        &:hover {
+            background-color: greenyellow;
+            padding-left: 20px;
+        }
+    
+        &:nth-child(1) {
+            font-weight: bold;
+        }
+    }
+
+
+
+    a[href^="ftp"] {
+        color: red;
+    }
+
+    a[href$=".pdf"],
+    a[href$=".doc"] {
+        display: block;
+        // background-color: blue;
+        background-image: url("pdf.jpg");
+        background-size: 20px 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        line-height: 25px; // per centrar el text en vertical la distància entre línies la fem coincidir amb l'alçada de la capsa
+    }
+
+    a[href$=".doc"] {
+        background-image: url("word.jpg");
+    }
+
+
+    a[href$=".pdf"]:after {
+        content: "Això és un link  "attr(href);
+        font-size: 0.5em;
+    }
+
+
+    input[type="text"] {
+        background-color: blueviolet;
+    }
+
+    input[type="text"]:focus {
+        border: 3px solid red;
+    }
+
+
+
+    .pilota {
+        background-color: rgb(196, 203, 216);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding-top: 15px;
+        box-sizing: border-box;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+10,90bae4+25,90bcea+37,90bff0+50,a2daf5+86,6ba8e5+91,6ba8e5+91,bdf3fd+100 */
+        background: #b8e1fc;
+        /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #a2daf5 86%, #6ba8e5 91%, #6ba8e5 91%, #bdf3fd 100%);
+        /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #a2daf5 86%, #6ba8e5 91%, #6ba8e5 91%, #bdf3fd 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #a2daf5 86%, #6ba8e5 91%, #6ba8e5 91%, #bdf3fd 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e1fc', endColorstr='#bdf3fd', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+
+    }
+
+    .pilota:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.479);
+
+        margin-left: 20px;
+    }
+
+    .pilota:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.479);
+
+        margin-left: 60px;
+    }
+
+    .fitxa {
+        margin-top: 30px;
+        position: relative;
+        font-family: fantasy;
+        font-size: 13px;
+        width: 40%;
+        padding: 30px;
+        background-color: rgb(238, 238, 53);
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: "";
+            display: block;
+            width: 0px;
+            height: 0px;
+            border: 10px solid rgba(120, 120, 120, 1);
+            border-right-color: black;
+            border-bottom-color: black;
+        }
+
+    }
+
+
+
+    .fitxa:after {
+        left: auto;
+        right: 0px;
+        border-right-color: rgba(120, 120, 120, 1);
+        border-left-color: black;
+    }
+
+}
