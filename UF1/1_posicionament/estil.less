@@ -1,0 +1,48 @@
+#org_mila_i_fontanals_diw_posicionament {
+
+    height: 100%;
+    font-size: 8px;
+    padding: 20px;
+
+    nav {
+        padding: 0px;
+        border: 1px solid red;
+        width: 50%;
+        background-color: aqua;
+        position: fixed;
+        top: 50%;
+        right: 0px;
+        width: 100px;
+        @alsada_menu: 20px;
+
+        &:hover li {
+            height: @alsada_menu;
+            border: 1px solid red;
+        }
+
+        li,
+        h1 {
+            display: block;
+            border: 1px solid red;
+            padding: 5px;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: @alsada_menu;
+        }
+
+        h1 {
+            background-color: chartreuse;
+            font-weight: bold;
+
+        }
+
+        li {
+            height: 0px;
+            padding: 0px;
+            border-width: 0px;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+    }
+
+}
