@@ -3,52 +3,51 @@
   font-size: 8px;
   font-family: Arial, Helvetica, sans-serif;
 }
-#org_mila_i_fontanals_diw_posicionament header nav {
+#org_mila_i_fontanals_diw_posicionament header nav.primary {
   background-color: black;
   color: white;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
-  /*ul{
-                overflow: hidden;
-            }*/
 }
-#org_mila_i_fontanals_diw_posicionament header nav li {
+#org_mila_i_fontanals_diw_posicionament header nav.primary li {
   position: relative;
   display: inline-block;
   padding: 10px;
 }
-#org_mila_i_fontanals_diw_posicionament header nav li:hover li {
+#org_mila_i_fontanals_diw_posicionament header nav.primary li:hover > ul > li {
   display: block;
 }
-#org_mila_i_fontanals_diw_posicionament header nav ul ul {
+#org_mila_i_fontanals_diw_posicionament header nav.primary > ul > li > ul {
   position: absolute;
   top: 100%;
   left: 0%;
 }
-#org_mila_i_fontanals_diw_posicionament header nav ul ul li {
+#org_mila_i_fontanals_diw_posicionament header nav.primary > ul > li > ul ul {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+#org_mila_i_fontanals_diw_posicionament header nav.primary > ul > li > ul li {
   display: none;
   background-color: yellow;
+  border: 0.5px solid black;
   color: black;
   width: 100%;
   text-align: center;
 }
-#org_mila_i_fontanals_diw_posicionament main {
-  padding: 20px;
-  margin-top: 20px;
-}
-#org_mila_i_fontanals_diw_posicionament .secondary {
+#org_mila_i_fontanals_diw_posicionament header .secondary {
   padding: 0px;
-  border: 1px solid red;
+  border: 0.5px solid black;
   width: 50%;
-  background-color: aqua;
+  background-color: yellow;
   position: fixed;
   top: 50%;
   right: 0px;
   width: 100px;
 }
-#org_mila_i_fontanals_diw_posicionament .secondary:after {
+#org_mila_i_fontanals_diw_posicionament header .secondary:after {
   content: "✖";
   text-align: center;
   line-height: 5px;
@@ -57,33 +56,44 @@
   display: block;
   width: 5px;
   height: 5px;
-  background-color: chocolate;
+  background-color: yellow;
   position: absolute;
   right: 2px;
   top: 2px;
-  border: 1px solid gray;
+  border: 0.5px solid white;
 }
-#org_mila_i_fontanals_diw_posicionament .secondary:hover li {
+#org_mila_i_fontanals_diw_posicionament header .secondary:hover li {
   height: 20px;
-  border: 1px solid red;
+  border: 0.5px solid black;
 }
-#org_mila_i_fontanals_diw_posicionament .secondary li,
-#org_mila_i_fontanals_diw_posicionament .secondary h1 {
+#org_mila_i_fontanals_diw_posicionament header .secondary:hover li:nth-child(2n) {
+  background-color: #ffff8f;
+}
+#org_mila_i_fontanals_diw_posicionament header .secondary:hover li:hover {
+  background-color: chartreuse;
+}
+#org_mila_i_fontanals_diw_posicionament header .secondary li,
+#org_mila_i_fontanals_diw_posicionament header .secondary h1 {
   display: block;
-  border: 1px solid red;
+  border: 0.5px solid black;
   padding: 5px;
   text-align: center;
   box-sizing: border-box;
   line-height: 20px;
 }
-#org_mila_i_fontanals_diw_posicionament .secondary h1 {
-  background-color: chartreuse;
+#org_mila_i_fontanals_diw_posicionament header .secondary h1 {
+  background-color: black;
+  color: white;
   font-weight: bold;
 }
-#org_mila_i_fontanals_diw_posicionament .secondary li {
+#org_mila_i_fontanals_diw_posicionament header .secondary li {
   height: 0px;
   padding: 0px;
   border-width: 0px;
   overflow: hidden;
   transition: height 0.5s;
+}
+#org_mila_i_fontanals_diw_posicionament main {
+  padding: 20px;
+  margin-top: 20px;
 }
