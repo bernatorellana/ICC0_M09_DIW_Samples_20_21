@@ -3,7 +3,7 @@
   font-size: 8px;
   padding: 20px;
 }
-#org_mila_i_fontanals_diw_posicionament nav {
+#org_mila_i_fontanals_diw_posicionament .secondary {
   padding: 0px;
   border: 1px solid red;
   width: 50%;
@@ -13,12 +13,27 @@
   right: 0px;
   width: 100px;
 }
-#org_mila_i_fontanals_diw_posicionament nav:hover li {
+#org_mila_i_fontanals_diw_posicionament .secondary:after {
+  content: "✖";
+  text-align: center;
+  line-height: 5px;
+  color: red;
+  font-size: 5px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: chocolate;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  border: 1px solid gray;
+}
+#org_mila_i_fontanals_diw_posicionament .secondary:hover li {
   height: 20px;
   border: 1px solid red;
 }
-#org_mila_i_fontanals_diw_posicionament nav li,
-#org_mila_i_fontanals_diw_posicionament nav h1 {
+#org_mila_i_fontanals_diw_posicionament .secondary li,
+#org_mila_i_fontanals_diw_posicionament .secondary h1 {
   display: block;
   border: 1px solid red;
   padding: 5px;
@@ -26,11 +41,11 @@
   box-sizing: border-box;
   line-height: 20px;
 }
-#org_mila_i_fontanals_diw_posicionament nav h1 {
+#org_mila_i_fontanals_diw_posicionament .secondary h1 {
   background-color: chartreuse;
   font-weight: bold;
 }
-#org_mila_i_fontanals_diw_posicionament nav li {
+#org_mila_i_fontanals_diw_posicionament .secondary li {
   height: 0px;
   padding: 0px;
   border-width: 0px;

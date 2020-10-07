@@ -4,7 +4,7 @@
     font-size: 8px;
     padding: 20px;
 
-    nav {
+    .secondary {
         padding: 0px;
         border: 1px solid red;
         width: 50%;
@@ -14,6 +14,24 @@
         right: 0px;
         width: 100px;
         @alsada_menu: 20px;
+
+        &:after {
+            content: "✖";
+            text-align: center;
+            line-height: 5px;
+            color: red;
+            font-size: 5px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            background-color: chocolate;
+            position: absolute;
+
+            right: 2px;
+            top: 2px;
+            border: 1px solid gray;
+        }
+
 
         &:hover li {
             height: @alsada_menu;
@@ -33,7 +51,6 @@
         h1 {
             background-color: chartreuse;
             font-weight: bold;
-
         }
 
         li {
