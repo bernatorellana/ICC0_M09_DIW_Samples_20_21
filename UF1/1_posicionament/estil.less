@@ -2,7 +2,55 @@
 
     height: 100%;
     font-size: 8px;
-    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        nav {
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+
+
+            /*ul{
+                overflow: hidden;
+            }*/
+            li {
+                position: relative;
+                display: inline-block;
+                //float: left;
+                padding: 10px;
+
+                &:hover li {
+                    display: block;
+                }
+            }
+
+            ul ul {
+                position: absolute;
+                top: 100%;
+                left: 0%;
+
+                li {
+                    display: none;
+                    background-color: yellow;
+                    color: black;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+
+        }
+    }
+
+    main {
+        padding: 20px;
+        margin-top: 20px;
+    }
 
     .secondary {
         padding: 0px;

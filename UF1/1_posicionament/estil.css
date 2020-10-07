@@ -1,7 +1,42 @@
 #org_mila_i_fontanals_diw_posicionament {
   height: 100%;
   font-size: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#org_mila_i_fontanals_diw_posicionament header nav {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  /*ul{
+                overflow: hidden;
+            }*/
+}
+#org_mila_i_fontanals_diw_posicionament header nav li {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+#org_mila_i_fontanals_diw_posicionament header nav li:hover li {
+  display: block;
+}
+#org_mila_i_fontanals_diw_posicionament header nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+#org_mila_i_fontanals_diw_posicionament header nav ul ul li {
+  display: none;
+  background-color: yellow;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+#org_mila_i_fontanals_diw_posicionament main {
   padding: 20px;
+  margin-top: 20px;
 }
 #org_mila_i_fontanals_diw_posicionament .secondary {
   padding: 0px;
