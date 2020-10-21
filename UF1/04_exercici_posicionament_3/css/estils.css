@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v15/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSoHTQ.ttf) format('truetype');
+}
+.comic-strip {
+  display: flex;
+}
+i {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  display: block;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  padding: 50px;
+  position: relative;
+  width: 200px;
+  margin-right: 20px;
+  /*
+    &.joker:after {
+        background-image: url(../images/joker.png);
+    }
+
+    &.batman:after {
+        background-image: url(../images/batman.png);
+    }
+
+    &.harvey:after {
+        background-image: url(../images/harvey.png);
+    }*/
+}
+i:before {
+  position: absolute;
+  top: 120%;
+  left: 46%;
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 20px solid transparent;
+  border-top-color: rebeccapurple;
+  transform: scaleY(6) rotate(15deg);
+  z-index: 100;
+}
+i:after {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  content: "";
+  display: block;
+  width: 150px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+i.joker:after {
+  background-image: url("../images/joker.png");
+}
+i.batman:after {
+  background-image: url("../images/batman.png");
+}
+i.harvey:after {
+  background-image: url("../images/harvey.png");
+}
