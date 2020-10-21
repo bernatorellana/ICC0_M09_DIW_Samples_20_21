@@ -1,4 +1,55 @@
-
 html {
-         height:100%;
+    height: 100%;
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100px;
+        align-items: center;
+
+        li {
+            padding: 10px;
+
+            &.selected {
+                align-self: flex-start;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    section {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        @num_cols: 5;
+        height: 100%;
+
+        article {
+            &::first-letter {
+                font-weight: bolder;
+                font-size: 2em;
+            }
+
+            //flex: 1;
+            width:100% / @num_cols;
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .head {
+            flex: 2;
+        }
+
+        .highligth {
+            background-color: yellow;
+            order: -1;
+        }
+    }
 }

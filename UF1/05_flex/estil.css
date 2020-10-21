@@ -1,3 +1,44 @@
 html {
   height: 100%;
 }
+html nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  align-items: center;
+}
+html nav ul li {
+  padding: 10px;
+}
+html nav ul li.selected {
+  align-self: flex-start;
+  text-decoration: underline;
+}
+html main {
+  height: 100vh;
+}
+html section {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 100%;
+}
+html section article {
+  width: 20%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 10px;
+}
+html section article::first-letter {
+  font-weight: bolder;
+  font-size: 2em;
+}
+html section .head {
+  flex: 2;
+}
+html section .highligth {
+  background-color: yellow;
+  order: -1;
+}
