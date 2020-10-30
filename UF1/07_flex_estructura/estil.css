@@ -1,9 +1,12 @@
 #org_milaifontanals_info_diw body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "HEADER HEADER" "NAV MAIN" "FOOTER FOOTER";
   height: 100vh;
 }
 #org_milaifontanals_info_diw body header {
+  grid-area: HEADER;
   display: flex;
   align-items: center;
 }
@@ -28,45 +31,44 @@
 #org_milaifontanals_info_diw body header footer ul li {
   padding: 5px;
 }
-#org_milaifontanals_info_diw body .row {
-  display: flex;
-  flex: 1;
-}
-#org_milaifontanals_info_diw body .row nav {
+#org_milaifontanals_info_diw body nav {
   background-color: grey;
   flex: 1;
   padding: 20px;
+  grid-area: NAV;
 }
-#org_milaifontanals_info_diw body .row main {
+#org_milaifontanals_info_diw body main {
+  grid-area: MAIN;
   flex: 3;
   padding: 20px;
 }
-#org_milaifontanals_info_diw body .row main h2 {
+#org_milaifontanals_info_diw body main h2 {
   font-size: 1.5em;
   font-weight: bolder;
   margin-top: 15px;
 }
-#org_milaifontanals_info_diw body .row main section:nth-child(2) {
+#org_milaifontanals_info_diw body main section:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
 }
-#org_milaifontanals_info_diw body .row main section:nth-child(2) h2 {
+#org_milaifontanals_info_diw body main section:nth-child(2) h2 {
   width: 100%;
 }
-#org_milaifontanals_info_diw body .row main section:nth-child(2) figure {
+#org_milaifontanals_info_diw body main section:nth-child(2) figure {
   display: block;
   width: 33.33%;
   padding: 10px;
   box-sizing: border-box;
 }
-#org_milaifontanals_info_diw body .row main section:nth-child(2) figure img {
+#org_milaifontanals_info_diw body main section:nth-child(2) figure img {
   display: block;
   width: 100%;
 }
-#org_milaifontanals_info_diw body .row main section:nth-child(2) figure h3 {
+#org_milaifontanals_info_diw body main section:nth-child(2) figure h3 {
   text-align: center;
 }
 #org_milaifontanals_info_diw body footer {
+  grid-area: FOOTER;
   display: flex;
   justify-content: space-around;
 }

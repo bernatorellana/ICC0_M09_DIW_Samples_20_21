@@ -1,0 +1,92 @@
+.mixin_radios(@num) {
+    #rdo@{num}:checked~nav li:nth-child(@{num}) {
+        background-color: black;
+    }
+
+    #rdo@{num}:checked~.slider_inner {
+        left: -(@num - 1) * 100%;
+    }
+}
+
+html {
+    height: 100%;
+
+    .slider {
+        overflow: hidden;
+        position: relative;
+
+        .mixin_radios(1);
+        .mixin_radios(2);
+        .mixin_radios(3);
+
+
+        // Amaguem el truc
+        input[type=radio] {
+            display: none;
+        }
+
+        .slider_inner {
+            /* &:hover {
+                left: -100%;
+                transition: left 0.5s;
+            }*/
+
+            position: relative;
+            display: flex;
+            top: 0px;
+            left: -00%;
+            transition: left 0.5s;
+
+            li {
+                display: block;
+
+                img {
+                    display: block;
+                    width: 100vw;
+                }
+            }
+        }
+
+        nav {
+            position: absolute;
+
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            ul {
+                display: flex;
+
+                li {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 5px;
+                    background-color: white;
+                    border-radius: 50%;
+
+                    label {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+
+        i {
+            font-size: 3em;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.5;
+        }
+
+        .fa-angle-right {
+            right: 0px;
+
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="estil.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+	<main>
+		<section class="slider">
+			<input type="radio" checked id="rdo1" name="opcio">
+			<input type="radio" id="rdo2" name="opcio">
+			<input type="radio" id="rdo3" name="opcio">
+			<ul class="slider_inner">
+				<li><img src="https://picsum.photos/id/1003/800/300"></li>
+				<li><img src="https://picsum.photos/id/1004/800/300"></li>
+				<li><img src="https://picsum.photos/id/100/800/300"></li>
+			</ul>
+
+			<nav>
+				<ul>
+					<li><label for="rdo1"></label></li>
+					<li><label for="rdo2"></label></li>
+					<li><label for="rdo3"></label></li>
+				</ul>
+
+			</nav>
+			<i class="fas fa-angle-right" onclick="move(1);"></i>
+			<i class="fas fa-angle-left" onclick="move(-1);"></i>
+		</section>
+
+
+		<section class="capsa">
+			<h1>Welcome to the Jungle !</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lorem metus, interdum eu consequat
+				hendrerit, fermentum sed nisi. Mauris a tortor nec ex pretium interdum eget eget mauris. Cras eu
+				ullamcorper risus. Vivamus eu risus at risus venenatis ullamcorper vel sed mauris. Nulla eu metus sed
+				neque dignissim consequat. Sed pharetra eget nisl consectetur rutrum. Sed dapibus commodo faucibus.
+				Vestibulum vitae orci et velit convallis laoreet et ac ligula. Proin rutrum purus nisl. Quisque sed
+				laoreet tellus. Nulla nibh tortor, vulputate at purus a, aliquet consectetur nibh. </p>
+
+			<p>In finibus tempus orci in viverra. Vestibulum auctor tortor id magna malesuada lobortis. Cras at dolor et
+				leo luctus dapibus quis ut enim. Nunc condimentum porta odio et scelerisque. Suspendisse sagittis mollis
+				aliquam. Vivamus egestas laoreet iaculis. Cras aliquam, mi id dapibus lacinia, ex nunc consectetur ex,
+				eget vestibulum augue massa ut tellus. Nulla finibus scelerisque lobortis. Nam a turpis eu nunc luctus
+				posuere sit amet tristique nulla. Morbi a neque nisl. </p>
+		</section>
+	</main>
+</body>
+<script>
+	var selected = 1;
+	var interval = 3000;
+	setInterval(moveF, interval);
+
+	function moveF() {
+		move(1);
+	}
+
+	function move(dir) {
+		console.info(selected);
+		selected = selected + parseInt(dir);
+		console.info(dir);
+		console.info(selected);
+		if (selected > 3) selected = 1;
+		if (selected == 0) selected = 3;
+		document.getElementById("rdo" + selected).checked = true;
+	}
+
+</script>
+
+</html>

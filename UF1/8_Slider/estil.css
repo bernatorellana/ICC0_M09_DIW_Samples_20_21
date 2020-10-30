@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+}
+html .slider {
+  overflow: hidden;
+  position: relative;
+}
+html .slider #rdo1:checked ~ nav li:nth-child(1) {
+  background-color: black;
+}
+html .slider #rdo1:checked ~ .slider_inner {
+  left: 0%;
+}
+html .slider #rdo2:checked ~ nav li:nth-child(2) {
+  background-color: black;
+}
+html .slider #rdo2:checked ~ .slider_inner {
+  left: -100%;
+}
+html .slider #rdo3:checked ~ nav li:nth-child(3) {
+  background-color: black;
+}
+html .slider #rdo3:checked ~ .slider_inner {
+  left: -200%;
+}
+html .slider input[type=radio] {
+  display: none;
+}
+html .slider .slider_inner {
+  /* &:hover {
+                left: -100%;
+                transition: left 0.5s;
+            }*/
+  position: relative;
+  display: flex;
+  top: 0px;
+  left: 0%;
+  transition: left 0.5s;
+}
+html .slider .slider_inner li {
+  display: block;
+}
+html .slider .slider_inner li img {
+  display: block;
+  width: 100vw;
+}
+html .slider nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html .slider nav ul {
+  display: flex;
+}
+html .slider nav ul li {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 50%;
+}
+html .slider nav ul li label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+html .slider i {
+  font-size: 3em;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+html .slider .fa-angle-right {
+  right: 0px;
+}
