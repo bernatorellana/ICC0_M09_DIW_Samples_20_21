@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  --aspect-ratio: 9 / 16;
+  --amplada: 50%;
+}
+body section,
+body main {
+  height: 100%;
+}
+body main section {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main section article {
+  background-size: cover;
+  background-position: center center;
+  width: var(--amplada);
+  height: 0px;
+  padding-top: calc(var(--amplada) * var(--aspect-ratio));
+}
+body main section article img {
+  display: none;
+}

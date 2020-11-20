@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+}
+html header {
+  background-color: black;
+  height: 80px;
+}
+html header h1 {
+  color: white;
+  font-size: 25px;
+}
+html header li {
+  color: white;
+  display: block;
+}
+html img {
+  width: 100%;
+  display: block;
+}
