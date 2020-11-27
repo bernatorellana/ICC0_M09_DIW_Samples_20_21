@@ -1,19 +1,32 @@
-html {
+#com_milaifontanals_diw {
   height: 100%;
 }
-html header {
+#com_milaifontanals_diw .card-title {
+  color: red;
+}
+#com_milaifontanals_diw header {
   background-color: black;
   height: 80px;
 }
-html header h1 {
+#com_milaifontanals_diw header > .container {
+  height: 100%;
+}
+#com_milaifontanals_diw header > .container > .row {
+  height: 100%;
+}
+#com_milaifontanals_diw header > .container > .row ul {
+  margin-bottom: 0px;
+}
+#com_milaifontanals_diw header h1,
+#com_milaifontanals_diw header #menu_icon {
   color: white;
   font-size: 25px;
 }
-html header li {
+#com_milaifontanals_diw header li {
   color: white;
   display: block;
 }
-html img {
+#com_milaifontanals_diw img {
   width: 100%;
   display: block;
 }
