@@ -1,0 +1,45 @@
+html form > div {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+html form > div label {
+  width: 100px;
+}
+html form > div div {
+  flex: 1;
+  position: relative;
+  margin-left: 10px;
+}
+html form > div div i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  font-size: 10px;
+  color: #bbb;
+  border-right: 1px solid #bbb;
+  padding: 2px;
+}
+html form > div div input {
+  padding-left: 25px;
+  -webkit-box-shadow: inset -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid black;
+}
+html form > div div input:focus {
+  border: 1px solid blue;
+}
+html form > div div input:focus:invalid {
+  background-color: red;
+}
+html form > div div input:focus:invalid ~ span {
+  visibility: visible;
+}
+html form > div span {
+  display: block;
+  margin: 5px;
+  visibility: hidden;
+}

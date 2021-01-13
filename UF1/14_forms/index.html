@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="estil.css" />
+</head>
+
+<body>
+	<main>
+		<form>
+			<div>
+				<label for="txtNom">Nom:</label>
+				<div>
+					<i class="far fa-user"></i>
+					<input id="txtNom" type="text" name="nom" required>
+				</div>
+			</div>
+			<div>
+				<label for="txtCognom">Cognom:</label><input id="txtCognom" type="text" name="cognom" required>
+			</div>
+			<div>
+				<label for="txtCognom">NIF:</label>
+				<input id="txtNIF" type="text" name="NIF" required pattern="[0-9]{8}[A-Z]">
+				<span> NIF incorrecte </span>
+			</div>
+			<div>
+				<label for="txtPhone">Telèfon:</label><input id="txtPhone" type="phone" name="telefon" required>
+			</div>
+			<div>
+				<label for="txtMail">e-mail:</label><input id="txtMail" type="email" name="mail" required>
+			</div>
+			<div>
+				<label for="txtColor">Color:</label><input id="txtColor" type="color" name="color" required>
+			</div>
+			<div>
+				<label for="txtRange">Satisfaction:</label>
+				<input type="range" id="txtRange" size="2" name="satisfaction" min="1" max="5" value="3">
+			</div>
+			<div>
+				<label for="txtColor">Data:</label><input id="txtColor" type="date" name="data" required>
+			</div>
+			<div>
+				<label for="txtColor">hora:</label><input id="txtColor" type="time" name="datetime" required>
+			</div>
+			<div>
+				<label for="txtColor">dia i hora:</label><input id="txtColor" type="datetime-local"
+					name="datetime-local" required>
+			</div>
+		</form>
+
+	</main>
+</body>
+
+</html>
