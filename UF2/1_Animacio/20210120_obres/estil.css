@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body main .obres {
+  background-color: yellow;
+  height: 60px;
+  width: 240px;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+body main .obres:hover i {
+  transform: translateX(-102.67949192px) skewX(-30deg);
+}
+body main .obres i {
+  flex: none;
+  display: block;
+  background-color: black;
+  height: 100%;
+  width: 60px;
+  margin-right: 60px;
+  transform: translateX(17.32050808px) skewX(-30deg);
+  transition: transform 1s;
+  box-sizing: border-box;
+}

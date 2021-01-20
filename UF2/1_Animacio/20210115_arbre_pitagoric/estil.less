@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+
+
+
+    main {
+        position: relative;
+        width: 200px;
+        height: 200px;
+
+
+
+        div {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            .rot {
+
+                z-index: 2;
+                background-color: lime;
+
+            }
+
+            .fill:nth-child(1) {
+                left: -50%;
+                //transform: translate(-200px / 2, -(200px/2 + 200px*sqrt(2)/2/sqrt(2))) rotate(45deg) scale(sqrt(2)/2);
+                transform: scale(sqrt(2)/2);
+                background-color: transparent;
+                z-index: 1;
+
+                &>.rot {
+                    transform: translateY(-100%/sqrt(2)) rotate(-45deg) translate(50%, -50%);
+                }
+            }
+
+            .fill:nth-child(2) {
+                left: +50%;
+                transform: scale(sqrt(2)/2);
+                background-color: transparent;
+                z-index: 1;
+
+                &>.rot {
+                    transform: translateY(-100%/sqrt(2)) rotate(+45deg) translate(-50%, -50%);
+                }
+            }
+        }
+
+
+        &:hover {
+            .fill:nth-child(1) .rot {
+                transition: transform 1s;
+                transform: translateY(-100%/sqrt(2)) rotate(-25deg) translate(50%, -50%);
+            }
+
+            .fill:nth-child(2) .rot {
+                transition: transform 1s;
+                transform: translateY(-100%/sqrt(2)) rotate(+25deg) translate(-50%, -50%);
+            }
+
+        }
+
+    }
+
+}

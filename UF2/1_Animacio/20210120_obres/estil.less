@@ -1,0 +1,45 @@
+//----------------------------------
+// Variables per controlar la barra d'obres/progrés
+//----------------------------------
+@alcada: 60px;
+@angle: 30deg;
+@amplada_bloc: 60px;
+@separacio: 60px;
+@num_blocs: 3;
+//----------------------------------
+@x: tan(@angle) * @alcada * 0.5;
+//----------------------------------
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    main {
+        .obres {
+            background-color: yellow;
+            height: @alcada;
+            width: (@amplada_bloc + @separacio ) * (@num_blocs - 1);
+            display: flex;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            &:hover i {
+                transform: translateX(@x - @amplada_bloc - @separacio) skewX(-@angle);
+            }
+
+            i {
+                flex: none;
+                display: block;
+                background-color: black;
+                height: 100%;
+                width: @amplada_bloc;
+                margin-right: @separacio;
+                transform: translateX(@x) skewX(-@angle);
+                transition: transform 1s;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

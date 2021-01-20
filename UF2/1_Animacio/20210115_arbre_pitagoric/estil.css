@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+body main {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+body main div {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body main div .rot {
+  z-index: 2;
+  background-color: lime;
+}
+body main div .fill:nth-child(1) {
+  left: -50%;
+  transform: scale(0.70710678);
+  background-color: transparent;
+  z-index: 1;
+}
+body main div .fill:nth-child(1) > .rot {
+  transform: translateY(-70.71067812%) rotate(-45deg) translate(50%, -50%);
+}
+body main div .fill:nth-child(2) {
+  left: 50%;
+  transform: scale(0.70710678);
+  background-color: transparent;
+  z-index: 1;
+}
+body main div .fill:nth-child(2) > .rot {
+  transform: translateY(-70.71067812%) rotate(45deg) translate(-50%, -50%);
+}
+body main:hover .fill:nth-child(1) .rot {
+  transition: transform 1s;
+  transform: translateY(-70.71067812%) rotate(-25deg) translate(50%, -50%);
+}
+body main:hover .fill:nth-child(2) .rot {
+  transition: transform 1s;
+  transform: translateY(-70.71067812%) rotate(25deg) translate(-50%, -50%);
+}
