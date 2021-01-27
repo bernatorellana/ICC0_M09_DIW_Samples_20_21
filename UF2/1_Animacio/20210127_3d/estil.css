@@ -1,0 +1,95 @@
+section {
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.fotos div {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  transform: rotateY(45deg);
+  transition: transform 1s;
+}
+section.fotos div:hover {
+  transform: rotateY(0deg) translateZ(400px);
+}
+section.card {
+  margin-top: 30px;
+}
+section.card article {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+section.card article:hover {
+  transform: rotateY(-180deg);
+}
+section.card article div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section.card article div.front {
+  background-color: aqua;
+}
+section.card article div.back {
+  background-color: red;
+  transform: rotateY(180deg);
+}
+section.cub {
+  margin-top: 30px;
+}
+section.cub article {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+section.cub article:hover {
+  transform: rotateX(360deg) rotateY(360deg);
+}
+section.cub article div {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  opacity: 1;
+}
+section.cub article div.front {
+  background-color: aqua;
+  transform: translateZ(100px) rotateY(0deg);
+}
+section.cub article div.back {
+  background-color: red;
+  transform: translateZ(-100px) rotateY(180deg);
+}
+section.cub article div.left {
+  background-color: blueviolet;
+  transform: translateX(-100px) rotateY(-90deg);
+}
+section.cub article div.right {
+  background-color: green;
+  transform: translateX(100px) rotateY(90deg);
+}
+section.cub article div.top {
+  background-color: orange;
+  transform: translateY(100px) rotateX(-90deg);
+}
+section.cub article div.bottom {
+  background-color: yellow;
+  transform: translateY(-100px) rotateX(90deg);
+}

@@ -1,0 +1,119 @@
+section {
+    // contenidor de pespectiva
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.fotos {
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            transform: rotateY(45deg);
+            transition: transform 1s;
+
+            &:hover {
+                transform: rotateY(0deg) translateZ(400px);
+            }
+        }
+    }
+
+    &.card {
+        margin-top: 30px;
+
+
+        article {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            transform-origin: left center;
+
+            &:hover {
+                transform: rotateY(-180deg);
+            }
+
+            div {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                overflow: hidden;
+
+
+                &.front {
+                    background-color: aqua;
+                }
+
+                &.back {
+                    background-color: red;
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+
+    &.cub {
+        margin-top: 30px;
+
+        article {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform: rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            transition: transform 3s;
+
+            &:hover {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+
+            div {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                backface-visibility: hidden;
+                overflow: hidden;
+                opacity: 1;
+
+                &.front {
+                    background-color: aqua;
+                    transform: translateZ(+100px) rotateY(0deg);
+                }
+
+                &.back {
+                    background-color: red;
+                    transform: translateZ(-100px) rotateY(180deg);
+                }
+
+                &.left {
+                    background-color: blueviolet;
+                    transform: translateX(-100px) rotateY(-90deg);
+                }
+
+                &.right {
+                    background-color: green;
+                    transform: translateX(+100px) rotateY(+90deg);
+                }
+
+                &.top {
+                    background-color: orange;
+                    transform: translateY(+100px) rotateX(-90deg);
+                }
+
+                &.bottom {
+                    background-color: yellow;
+                    transform: translateY(-100px) rotateX(+90deg);
+                }
+            }
+        }
+    }
+}
