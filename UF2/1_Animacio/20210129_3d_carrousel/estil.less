@@ -1,0 +1,76 @@
+@costats: 6;
+
+@angle: (360deg/@costats);
+@mida: 200px;
+@d: (@mida*0.5 / tan(@angle*0.5));
+
+
+.costat_rotat(@num) {
+    &:nth-child(@{num}) {
+        transform: rotateY(@angle*@num) translateZ(@d);
+    }
+}
+
+.carrousel {
+    // contenidor de pespectiva
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    perspective-origin: 50% 0%; // situem el punt de fuga
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover ul {
+        transform: rotateY(360deg);
+    }
+
+    ul {
+        transform-style: preserve-3d; // permet que la rotació a l'ul es propagui als fills
+        position: relative;
+        width: @mida;
+        height: @mida;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        transition: transform 10s;
+
+        li {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: @mida;
+            height: @mida;
+            transform: rotateY(@angle*0) translateZ(@d);
+
+            .costat_rotat(1);
+            .costat_rotat(2);
+            .costat_rotat(3);
+            .costat_rotat(4);
+            .costat_rotat(5);
+
+
+            /*
+            &:nth-child(1) {
+                transform: rotateY(@angle*1) translateZ(@d);
+            }
+
+            &:nth-child(2) {
+                transform: rotateY(@angle*2) translateZ(@d);
+            }
+
+            &:nth-child(3) {
+                transform: rotateY(@angle*3) translateZ(@d);
+            }
+
+            &:nth-child(4) {
+                transform: rotateY(@angle*4) translateZ(@d);
+            }
+
+            &:nth-child(5) {
+                transform: rotateY(@angle*5) translateZ(@d);
+            }*/
+        }
+    }
+}

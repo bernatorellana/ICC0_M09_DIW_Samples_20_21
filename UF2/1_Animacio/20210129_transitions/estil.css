@@ -1,0 +1,61 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+.boles {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boles:hover ul li {
+  transform: translateY(-200px) rotate(360deg) scale(0.5);
+  margin-left: 0px;
+}
+
+.boles ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+.boles ul li {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 25px;
+  transition: transform 2s, margin-left 1s;
+  overflow: hidden;
+}
+
+.boles ul li:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.boles ul li:nth-child(2) {
+  transition-delay: 0.66666667s;
+}
+
+.boles ul li:nth-child(3) {
+  transition-delay: 1.33333333s;
+}
+
+.boles ul li:nth-child(4) {
+  transition-delay: 2s;
+}
+
+.boles ul li:nth-child(5) {
+  transition-delay: 2.66666667s;
+}
+
+.boles ul li:nth-child(6) {
+  transition-delay: 3.33333333s;
+}

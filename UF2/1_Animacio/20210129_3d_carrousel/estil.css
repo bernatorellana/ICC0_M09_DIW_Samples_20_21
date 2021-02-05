@@ -1,0 +1,66 @@
+.carrousel {
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+  perspective-origin: 50% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrousel:hover ul {
+  transform: rotateY(360deg);
+}
+.carrousel ul {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  transition: transform 10s;
+}
+.carrousel ul li {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: rotateY(0deg) translateZ(173.20508076px);
+  /*
+            &:nth-child(1) {
+                transform: rotateY(@angle*1) translateZ(@d);
+            }
+
+            &:nth-child(2) {
+                transform: rotateY(@angle*2) translateZ(@d);
+            }
+
+            &:nth-child(3) {
+                transform: rotateY(@angle*3) translateZ(@d);
+            }
+
+            &:nth-child(4) {
+                transform: rotateY(@angle*4) translateZ(@d);
+            }
+
+            &:nth-child(5) {
+                transform: rotateY(@angle*5) translateZ(@d);
+            }*/
+}
+.carrousel ul li:nth-child(1) {
+  transform: rotateY(60deg) translateZ(173.20508076px);
+}
+.carrousel ul li:nth-child(2) {
+  transform: rotateY(120deg) translateZ(173.20508076px);
+}
+.carrousel ul li:nth-child(3) {
+  transform: rotateY(180deg) translateZ(173.20508076px);
+}
+.carrousel ul li:nth-child(4) {
+  transform: rotateY(240deg) translateZ(173.20508076px);
+}
+.carrousel ul li:nth-child(5) {
+  transform: rotateY(300deg) translateZ(173.20508076px);
+}

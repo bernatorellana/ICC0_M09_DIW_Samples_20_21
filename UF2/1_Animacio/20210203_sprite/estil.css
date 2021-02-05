@@ -1,0 +1,42 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .sprite {
+  position: relative;
+  width: 80px;
+  height: 74px;
+  background-image: url(images/sprite.png);
+  transition: background-position 1s;
+  transition-timing-function: steps(6);
+}
+body .sprite:hover {
+  background-position: -480px 0px;
+}
+body .sprite:hover b {
+  transform: translateX(100px) scale(1);
+}
+body .sprite b {
+  position: absolute;
+  left: 40%;
+  top: calc(50% - 10px);
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: translateX(0px) scale(0);
+  background-color: rgba(251, 255, 0, 0.986);
+  border-radius: 50%;
+  transition: transform 1s;
+  transition-timing-function: linear;
+  transition-delay: 0.2s;
+}
