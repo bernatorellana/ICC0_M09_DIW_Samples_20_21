@@ -1,0 +1,52 @@
+@keyframes anim_fum {
+    0% {    background-position: 0px  0px;}
+    100% {  background-position: 0px  -10*81px;}
+}
+
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+
+
+    .escene {
+
+        .car{
+            transform:scale(0.2);
+            position: relative;
+
+            .fum {
+                position: absolute;
+                width:114px;
+                height: 80px;
+                top:50%;
+                right: 105%;
+                opacity: 0.7;
+                background-image: url(images/sprite.png);                
+                transform: scaleX(-3) scaleY(3) ;
+                animation-name: anim_fum;
+                animation-duration: 1s;
+                animation-timing-function: steps(10);
+                animation-iteration-count: infinite;
+            }
+
+            img {
+                //width: 150px;
+            }
+            .roda {
+                display: block;
+                position: absolute;
+                bottom:7px;
+                left:126px;
+                &:nth-of-type(2){
+                    bottom:12px;
+                    left:606px;
+                }
+            }
+
+        }
+    }
+
+}
+
