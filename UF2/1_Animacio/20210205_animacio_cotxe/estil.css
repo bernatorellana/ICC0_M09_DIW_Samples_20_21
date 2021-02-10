@@ -1,9 +1,49 @@
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bangers/v13/FeVQS0BTqb0h60ACL5k.ttf) format('truetype');
+}
 @keyframes anim_fum {
   0% {
-    background-position: 0px  0px;
+    background-position: 0px 0px;
   }
   100% {
     background-position: 0px -810px;
+  }
+}
+@keyframes anim_rodes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anim_fondo {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -612px 0%;
+  }
+}
+@keyframes anim-lletra {
+  0% {
+    transform: translateX(0vw) skewX(0deg);
+  }
+  /*80% {
+        transform: translateX(-90vw) skewX(0deg);
+    }*/
+  70% {
+    transform: translateX(-90vw) skewX(40deg);
+  }
+  80% {
+    transform: translateX(-90vw) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(-90vw) skewX(0deg);
   }
 }
 body,
@@ -11,10 +51,64 @@ html {
   padding: 0px;
   margin: 0px;
 }
+body .escene,
+html .escene {
+  position: relative;
+  height: 232px;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-image: url(images/cel.jpg);
+  animation-name: anim_fondo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body .escene ul,
+html .escene ul {
+  position: absolute;
+  left: 100%;
+  bottom: 30px;
+  height: 180px;
+}
+body .escene ul li,
+html .escene ul li {
+  opacity: 0.5;
+  display: block;
+  font-size: 210.6px;
+  font-family: 'Bangers', cursive;
+  position: absolute;
+  transform-origin: center bottom;
+  animation-name: anim-lletra;
+  animation-duration: 1s;
+  height: 180px;
+  animation-fill-mode: forwards;
+}
+body .escene ul li:nth-child(2),
+html .escene ul li:nth-child(2) {
+  left: 95px;
+  animation-delay: 0.5s;
+}
+body .escene ul li:nth-child(3),
+html .escene ul li:nth-child(3) {
+  left: 135px;
+  animation-delay: 1s;
+}
+body .escene .terra,
+html .escene .terra {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: #9b7117;
+}
 body .escene .car,
 html .escene .car {
   transform: scale(0.2);
-  position: relative;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  transform-origin: center bottom;
 }
 body .escene .car .fum,
 html .escene .car .fum {
@@ -37,6 +131,10 @@ html .escene .car .roda {
   position: absolute;
   bottom: 7px;
   left: 126px;
+  animation-name: anim_rodes;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 body .escene .car .roda:nth-of-type(2),
 html .escene .car .roda:nth-of-type(2) {

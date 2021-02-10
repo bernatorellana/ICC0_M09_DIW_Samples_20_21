@@ -1,30 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+//----------------------------------------
+// Variables
+//----------------------------------------
+
+@alsada_terra: 30px;
+
+//----------------------------------------
+
+
 @keyframes anim_fum {
-    0% {    background-position: 0px  0px;}
-    100% {  background-position: 0px  -10*81px;}
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: 0px -10*81px;
+    }
 }
 
+@keyframes anim_rodes {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anim_fondo {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: (-306px*2) 0%;
+    }
+}
+
+@keyframes anim-lletra {
+
+    0% {
+        transform: translateX(0vw) skewX(0deg);
+    }
+
+    /*80% {
+        transform: translateX(-90vw) skewX(0deg);
+    }*/
+
+    70% {
+        transform: translateX(-90vw) skewX(40deg);
+    }
+
+    80% {
+        transform: translateX(-90vw) skewX(-30deg);
+    }
+
+    100% {
+        transform: translateX(-90vw) skewX(0deg);
+    }
+}
+
+//--------------------------------------------
 body,
 html {
     padding: 0px;
     margin: 0px;
 
-
     .escene {
+        position: relative;
+        height: 116px*2;
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-image: url(images/cel.jpg);
+        animation-name: anim_fondo;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @alsada_lletra: 180px;
 
-        .car{
-            transform:scale(0.2);
-            position: relative;
+        ul {
+            position: absolute;
+            left: 100%;
+            bottom: @alsada_terra;
+            height: @alsada_lletra ;
+
+            li {
+                opacity: 0.5;
+                display: block;
+                font-size: @alsada_lletra * 1.17;
+                font-family: 'Bangers', cursive;
+                position: absolute;
+                transform-origin: center bottom;
+                animation-name: anim-lletra;
+                animation-duration: 1s;
+                height: @alsada_lletra ;
+                animation-fill-mode: forwards;
+
+                &:nth-child(2) {
+                    left: (95px);
+                    animation-delay: 0.5s;
+                }
+
+                &:nth-child(3) {
+                    left: (135px);
+                    animation-delay: 1s;
+                }
+            }
+
+        }
+
+
+        .terra {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: @alsada_terra;
+            width: 100%;
+            background-color: rgb(155, 113, 23);
+        }
+
+        .car {
+            transform: scale(0.2);
+            //position: relative;
+            position: absolute;
+            bottom: @alsada_terra;
+            left: 0px;
+            transform-origin: center bottom;
 
             .fum {
                 position: absolute;
-                width:114px;
+                width: 114px;
                 height: 80px;
-                top:50%;
+                top: 50%;
                 right: 105%;
                 opacity: 0.7;
-                background-image: url(images/sprite.png);                
-                transform: scaleX(-3) scaleY(3) ;
+                background-image: url(images/sprite.png);
+                transform: scaleX(-3) scaleY(3);
                 animation-name: anim_fum;
                 animation-duration: 1s;
                 animation-timing-function: steps(10);
@@ -34,19 +147,25 @@ html {
             img {
                 //width: 150px;
             }
+
             .roda {
                 display: block;
                 position: absolute;
-                bottom:7px;
-                left:126px;
-                &:nth-of-type(2){
-                    bottom:12px;
-                    left:606px;
+                bottom: 7px;
+                left: 126px;
+
+                &:nth-of-type(2) {
+                    bottom: 12px;
+                    left: 606px;
                 }
+
+                animation-name: anim_rodes;
+                animation-duration: 0.25s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
             }
 
         }
     }
 
 }
-
